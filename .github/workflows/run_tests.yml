@@ -32,7 +32,7 @@ jobs:
     - name: Save Test Logs
       run: mkdir staging && cp target/surefire-reports/*.txt staging
     - name: Upload Test Logs as Artifacts
-      uses: actions/upload-artifact@4
+      uses: actions/upload-artifact@v4 # https://github.com/actions/upload-artifact
       with:
         name: Test Logs
         path: staging/
