@@ -31,6 +31,9 @@ jobs:
 
     - name: Save Test Logs
       run: mkdir staging && cp target/surefire-reports/*.txt staging
+      if: ${{ always }}
+        # make it run even if the tests fail
+        # https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-jobs#example-not-requiring-successful-dependent-jobs
     - name: Upload Test Logs as Artifacts
       uses: actions/upload-artifact@v4 # https://github.com/actions/upload-artifact
       with:
