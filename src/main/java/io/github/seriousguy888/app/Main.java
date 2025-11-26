@@ -14,5 +14,7 @@ public class Main {
         app.setSize(800, 600);
         app.setLocationRelativeTo(null);
         app.setVisible(true);
+
+        // test commit
     }
 }
